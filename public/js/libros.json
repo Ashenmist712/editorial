@@ -1,0 +1,16 @@
+[
+    {
+        "titulo": "El Principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "genero": "Novela",
+        "precio": 19.99,
+        "stock": 10
+    },
+    {
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "genero": "Novela",
+        "precio": 29.99,
+        "stock": 5
+    }
+]
