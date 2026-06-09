@@ -496,6 +496,11 @@ body::after {
     div[style*="flex-wrap: wrap"] {
         flex-direction: column !important;
     }
+    div[style*="flex: 1"] {
+        flex: none !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
     .about-text, .cta-title, .cta-subtitle {
         text-align: center !important;
     }
