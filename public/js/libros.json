@@ -25,6 +25,7 @@
   {
     "id": 4,
     "titulo": "Heraldos del Seol",
+    "autor": "Juan Carlos Doñate",
     "imagen": "public/img/heraldosDelSeol.png",
     "sinopsis": "Hay una casa situada en el corazón del bosque maldito: tablas viejas, escarapeladas por los años, de amplios ventanales y escaleras que rechinan con murmullos de una no muy agradable bienvenida, donde cada pisada que dan es un llamado al infierno. Para nuestros protagonistas es un refugio seguro; pero no será así.",
     "precio": 350,
@@ -50,7 +51,7 @@
   {
     "id": 7,
     "titulo": "A través de la máscara",
-    "editor": "Juan Carlos Doñate",
+    "autor": "Juan Carlos Doñate",
     "imagen": "public/img/aTravesDeLaMascaraUnaMiradaAlMal.png",
     "sinopsis": "A través de una espeluznante narrativa donde se explora el miedo, el horror lacerante y una oscura fantasía con protagonismos épicos, los diecinueve autores de esta fascinante antología revelan sus visiones más sombrías, sórdidas y siniestras. Desde una familia que está siendo acechada por algo que se agazapa en la penumbra de la noche, hasta un deportista que, en aras de justicia, no teme explorar el lado oscuro del inconsciente; o incluso hasta un reino que ha caído en las garras de la tiranía. Una vez que abras este libro, el miedo será tu cómplice.",
     "precio": 250,
