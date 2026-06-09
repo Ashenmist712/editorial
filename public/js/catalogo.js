@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Menú móvil
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (mobileMenu && navLinksContainer) {
+        mobileMenu.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+            });
+        });
+    }
+
     const booksContainer = document.getElementById("books-container");
     const detailView = document.getElementById("book-detail-view");
     const catalogHeader = document.querySelector(".catalog-header");

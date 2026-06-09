@@ -316,3 +316,61 @@
     color: var(--text-secondary);
     letter-spacing: 3px;
 }
+
+/* Responsive Catalog */
+@media (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .book-card-cover {
+        height: 250px;
+    }
+    .book-title-gothic {
+        font-size: 3rem;
+    }
+    .book-author {
+        font-size: 1.2rem;
+    }
+    .synopsis-title {
+        font-size: 2rem;
+    }
+    
+    /* 3D Book scaling */
+    .book-3d-container {
+        transform: scale(0.85);
+        margin-bottom: -30px; /* offset the scaled height */
+    }
+    
+    /* Nav arrows adjustments */
+    .nav-arrow {
+        width: 15vw;
+    }
+    .nav-arrow i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-card-cover {
+        height: 220px;
+    }
+    .book-title-gothic {
+        font-size: 2.2rem;
+    }
+    .book-3d-container {
+        transform: scale(0.7);
+        margin-bottom: -60px;
+    }
+    .nav-arrow {
+        width: 12vw;
+    }
+    .nav-arrow i {
+        font-size: 1.5rem;
+    }
+    .btn-amazon {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
