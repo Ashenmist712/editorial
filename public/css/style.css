@@ -275,6 +275,22 @@ body::after {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.responsive-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.responsive-flex-item {
+    flex: 1 1 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 .glass-section {
     position: relative;
 }
@@ -519,10 +535,11 @@ body::after {
     }
     
     /* Layout Adjustments */
-    div[style*="flex-wrap: wrap"] {
+    .responsive-flex {
         flex-direction: column !important;
+        text-align: center;
     }
-    div[style*="flex: 1"] {
+    .responsive-flex-item {
         flex: none !important;
         width: 100% !important;
         min-width: 0 !important;
