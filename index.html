@@ -1,14 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Linterna Negra Ediciones</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-</body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <img src="public/img/logo_isolated.png" alt="Logo Linterna Negra" class="splash-logo" onerror="this.style.display='none'" style="filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.5)); max-height: 150px; width: auto;">
+            <h1 class="splash-title">LINTERNA <span>NEGRA</span></h1>
+        </div>
+    </div>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="public/img/logo_isolated.png" alt="Logo" class="nav-logo">
+            LINTERNA <span>NEGRA</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#coeditorial">Coeditorial</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#cta-catalogo">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. Coeditorial Section -->
+    <section id="coeditorial" class="section glass-section" style="margin-top: 100px;">
+        <h2 class="section-title">¿Qué es una coeditorial?</h2>
+        <div class="content-box" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; max-width: 1000px;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="public/img/coeditorial.png" alt="Concepto de Coeditorial" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.2);">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <p class="about-text" style="text-align: left; font-size: 1.15rem;">
+                    Una coeditorial es un modelo de publicación colaborativo donde el autor y la editorial unen fuerzas, recursos y talentos para dar vida a una obra literaria. En este esquema, trabajamos mano a mano contigo para garantizar que tu libro no solo vea la luz, sino que alcance su máximo potencial con una calidad profesional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Linterna Negra Section -->
+    <section id="nosotros" class="section">
+        <h2 class="section-title">¿Qué es Linterna Negra?</h2>
+        <div class="content-box" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; max-width: 1000px; flex-direction: row-reverse;">
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="public/img/logo_isolated.png" alt="Logo Linterna Negra" style="width: 100%; max-width: 350px; filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(220, 38, 38, 0.3));">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <p class="about-text" id="about-content" style="text-align: left; font-size: 1.15rem;">
+                    Cargando información...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CTA Catalog Section -->
+    <section id="cta-catalogo" class="cta-section">
+        <div class="cta-content" style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="public/img/catalogo_section.png" alt="Catálogo" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.2);">
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <h2 class="cta-title" style="margin-bottom: 1.5rem; text-align: left;">Descubre Nuestras Historias</h2>
+                <p class="cta-subtitle" style="font-size: 1.25rem; text-align: left;">Sumérgete en mundos de horror, fantasía y relatos inolvidables. Nuestro catálogo está cuidadosamente seleccionado para traerte las mejores obras.</p>
+                <br>
+                <a href="catalogo.html" class="btn btn-primary btn-large">Ver Catálogo Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section id="contacto" class="section glass-section">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <img src="public/img/contacto.png" alt="Contacto" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.2);">
+            <p class="about-text" style="margin-top: 2rem; font-size: 1.15rem; margin-bottom: 2rem;">¿Tienes un manuscrito o alguna duda? Escríbenos y nos pondremos en contacto contigo lo antes posible.</p>
+            
+            <button id="btn-open-modal" class="btn btn-primary btn-large">Contactar por WhatsApp</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.instagram.com/linternanegraediciones/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/p/Linterna-Negra-Ediciones-61566623955828/" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <p class="footer-text">&copy; 2026 Linterna Negra Ediciones. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="public/js/index.js"></script>
+
+    <!-- WhatsApp Contact Modal -->
+    <div id="whatsapp-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="btn-close-modal">&times;</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">Envíanos un Mensaje</h3>
+            <form id="whatsapp-form" class="contact-form">
+                <div class="form-group">
+                    <label for="wa-name">Nombre Completo</label>
+                    <input type="text" id="wa-name" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="wa-email">Correo Electrónico</label>
+                    <input type="email" id="wa-email" placeholder="tu@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="wa-phone">Número de Teléfono</label>
+                    <input type="tel" id="wa-phone" placeholder="Ej. 55 1234 5678" required>
+                </div>
+                <div class="form-group">
+                    <label for="wa-message">¿De qué trata el libro o cuál es tu duda?</label>
+                    <textarea id="wa-message" rows="4" placeholder="Cuéntanos un poco sobre tu historia..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

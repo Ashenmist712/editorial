@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Linterna Negra Ediciones</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="public/css/catalogo.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="public/img/logo_isolated.png" alt="Logo" class="nav-logo">
+            LINTERNA <span>NEGRA</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html" style="color: var(--text-primary);">Catálogo</a></li>
+        </ul>
+    </nav>
+
+    <div class="catalog-header">
+        <h1 class="section-title">Nuestro Catálogo</h1>
+        <p class="about-text">Descubre las historias más inquietantes y fascinantes de nuestros autores.</p>
+    </div>
+
+    <!-- Books Container (Se poblará con JS) -->
+    <div id="books-container" class="books-grid">
+        <!-- Los libros en 3D se insertarán aquí -->
+        <div class="book-placeholder">Cargando catálogo...</div>
+    </div>
+
+    <!-- Book Detail View (Oculto por defecto) -->
+    <div id="book-detail-view" class="detail-container hidden">
+        <!-- Áreas de navegación izquierda y derecha -->
+        <div id="nav-prev" class="nav-arrow left"><i class="fas fa-chevron-left"></i></div>
+        <div id="nav-next" class="nav-arrow right"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="breadcrumb">
+            <a href="#" id="back-to-catalog">Catálogo</a> / <span id="detail-breadcrumb-title">Sombra Eterna</span>
+        </div>
+        
+        <div class="detail-top">
+            <!-- Izquierda: Libro 3D -->
+            <div class="detail-left">
+                <div class="book-3d-container">
+                    <div class="book-3d">
+                        <div class="book-front"><img id="detail-cover" src="" alt="Portada" onerror="this.src='public/img/logo.png'; this.style.objectFit='contain';"></div>
+                        <div class="book-back"></div>
+                        <div class="book-left" id="detail-spine"></div>
+                        <div class="book-right"></div>
+                        <div class="book-top"></div>
+                        <div class="book-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Derecha: Información -->
+            <div class="detail-right">
+                <h1 id="detail-title" class="book-title-gothic">SOMBRA ETERNA</h1>
+                <h3 class="book-author">de <span id="detail-author">JAVIER SOLÍS</span></h3>
+                
+                <div class="book-meta">
+                    <p><strong>GÉNERO:</strong> <span id="detail-genre">Terror / Misterio</span></p>
+                    <p><strong>AUTOR:</strong> <span id="detail-author-meta">Javier Solís</span></p>
+                    <p><strong>AÑO DE PUBLICACIÓN:</strong> <span id="detail-year">2024</span></p>
+                    <p><strong>PRECIO:</strong> $<span id="detail-price">299.00</span> MXN</p>
+                </div>
+                
+                <a href="#" id="detail-amazon" class="btn-amazon" target="_blank">
+                    COMPRAR EN AMAZON <i class="fab fa-amazon"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Abajo: Sinopsis -->
+        <div class="detail-bottom">
+            <h2 class="synopsis-title">SINOPSIS</h2>
+            <p id="detail-synopsis" class="synopsis-text">
+                Cargando sinopsis...
+            </p>
+            <div id="detail-pagination" class="detail-pagination">1 / 8</div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <section id="contacto" class="section glass-section">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <img src="public/img/contacto.png" alt="Contacto" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.2);">
+            <p class="about-text" style="margin-top: 2rem; font-size: 1.15rem; margin-bottom: 2rem;">¿Tienes un manuscrito o alguna duda? Escríbenos y nos pondremos en contacto contigo lo antes posible.</p>
+            
+            <button id="btn-open-modal" class="btn btn-primary btn-large">Contactar por WhatsApp</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 5rem;">
+        <div class="social-links">
+            <a href="https://www.instagram.com/linternanegraediciones/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/p/Linterna-Negra-Ediciones-61566623955828/" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <p class="footer-text">&copy; 2026 Linterna Negra Ediciones. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="public/js/catalogo.js"></script>
+
+    <!-- WhatsApp Contact Modal -->
+    <div id="whatsapp-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="btn-close-modal">&times;</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">Envíanos un Mensaje</h3>
+            <form id="whatsapp-form" class="contact-form">
+                <div class="form-group">
+                    <label for="wa-name">Nombre Completo</label>
+                    <input type="text" id="wa-name" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="wa-email">Correo Electrónico</label>
+                    <input type="email" id="wa-email" placeholder="tu@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="wa-phone">Número de Teléfono</label>
+                    <input type="tel" id="wa-phone" placeholder="Ej. 55 1234 5678" required>
+                </div>
+                <div class="form-group">
+                    <label for="wa-message">¿De qué trata el libro o cuál es tu duda?</label>
+                    <textarea id="wa-message" rows="4" placeholder="Cuéntanos un poco sobre tu historia..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

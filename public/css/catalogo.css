@@ -1,0 +1,318 @@
+/* Estilos específicos para el catálogo y el 3D */
+.catalog-header {
+    margin-top: 100px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 3rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tarjeta del libro en la cuadrícula */
+.book-card {
+    background: transparent;
+    cursor: pointer;
+    perspective: 1000px;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+}
+
+.book-card-cover {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.book-card:hover .book-card-cover {
+    box-shadow: 8px 10px 20px rgba(220, 38, 38, 0.2);
+}
+
+.book-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* -------------------------------------
+   VISTA DE DETALLE DEL LIBRO
+---------------------------------------- */
+.detail-container {
+    max-width: 1000px;
+    margin: 120px auto 4rem auto;
+    padding: 0 20px;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.detail-top {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .detail-top {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* EFECTO 3D CSS */
+.detail-left {
+    flex: 0 0 350px;
+}
+
+.book-3d-container {
+    perspective: 1200px;
+    width: 320px;
+    height: 480px;
+    margin: 0 auto;
+}
+
+.book-3d {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-25deg);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.book-3d-container:hover .book-3d {
+    transform: rotateY(-10deg) scale(1.05);
+}
+
+.book-front, .book-back, .book-left, .book-right, .book-top, .book-bottom {
+    position: absolute;
+}
+
+.book-front {
+    width: 320px; 
+    height: 480px;
+    transform: translateZ(25px);
+    background: #111;
+    border-radius: 2px 5px 5px 2px;
+    overflow: hidden;
+    box-shadow: inset 4px 0 10px rgba(0,0,0,0.5);
+}
+
+.book-front img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.book-back {
+    width: 320px; 
+    height: 480px;
+    transform: rotateY(180deg) translateZ(25px);
+    background: #09090b;
+    border: 1px solid #222;
+    border-radius: 5px 2px 2px 5px;
+}
+
+.book-left {
+    width: 50px; 
+    height: 480px;
+    background: linear-gradient(to right, #111, #333, #111);
+    transform: rotateY(-90deg) translateZ(25px);
+}
+
+/* Páginas simuladas */
+.book-right { 
+    width: 46px; 
+    height: 470px; 
+    background: #d4d4d4; 
+    background-image: repeating-linear-gradient(to right, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px);
+    transform: rotateY(90deg) translateZ(292px); 
+    top: 5px;
+}
+
+.book-top { 
+    width: 310px; 
+    height: 46px; 
+    background: #d4d4d4; 
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px);
+    transform: rotateX(90deg) translateZ(25px); 
+    left: 5px;
+}
+
+.book-bottom { 
+    width: 310px; 
+    height: 46px; 
+    background: #d4d4d4; 
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px);
+    transform: rotateX(-90deg) translateZ(455px); 
+    left: 5px;
+}
+
+/* Info Derecha */
+.detail-right {
+    flex: 1;
+}
+
+.book-title-gothic {
+    font-family: 'Creepster', cursive;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: #e5e5e5;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+}
+
+.book-author {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.book-author span {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.book-meta {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.book-meta p {
+    margin-bottom: 0.8rem;
+}
+
+.book-meta strong {
+    color: var(--text-primary);
+    margin-right: 0.5rem;
+}
+
+.btn-amazon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #4b1a2e, #2e0f1c);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    color: var(--text-primary);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+}
+
+.btn-amazon:hover {
+    background: linear-gradient(135deg, #5c2038, #3b1324);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+    border-color: var(--accent);
+}
+
+/* Sinopsis Abajo */
+.detail-bottom {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.synopsis-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.synopsis-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Nav arrows for detail view */
+.nav-arrow {
+    position: fixed;
+    top: 0;
+    width: 10vw; /* Wide hit area */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-arrow i {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease, transform 0.3s ease;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.8));
+}
+
+.nav-arrow.left {
+    left: 0;
+}
+
+.nav-arrow.right {
+    right: 0;
+}
+
+.nav-arrow:hover {
+    opacity: 1;
+}
+
+.nav-arrow:hover i {
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.2);
+}
+
+/* Pagination indicator */
+.detail-pagination {
+    margin-top: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 3px;
+}

@@ -1,16 +1,61 @@
 [
-    {
-        "titulo": "El Principito",
-        "autor": "Antoine de Saint-Exupéry",
-        "genero": "Novela",
-        "precio": 19.99,
-        "stock": 10
-    },
-    {
-        "titulo": "Don Quijote de la Mancha",
-        "autor": "Miguel de Cervantes",
-        "genero": "Novela",
-        "precio": 29.99,
-        "stock": 5
-    }
+  {
+    "id": 1,
+    "titulo": "Poesía Eviterna",
+    "autor": "Ana Bertha Bardales Sosa",
+    "imagen": "public/img/ppoesiEviterna.png.png",
+    "sinopsis": "\"Poesía Eviterna\" es un libro que enuncia, denuncia y muestra las verdades que, a veces, se callan o se silencian. En estas páginas se le habla a las ausencias, a los amores perdidos, a las heridas que duelen, al paso del tiempo, al dolor por las guerras (en el sentido de que pareciera que el humano está destinado a repetir los errores del pasado); a la idea de trascendencia de este plano físico a uno espiritual y, por tanto, más pleno y complejo; a aquello que tiene un inicio, pero jamás un fin, porque todo es como una espiral eterna cuyo principio no se alcanza a divisar y cuyo final tampoco se puede vislumbrar."
+  },
+  {
+    "id": 2,
+    "tipo": "editorial",
+    "nombre": "LINTERNA NEGRA",
+    "descripcion": "LINTERNA NEGRA es una casa editorial independiente fundada desde enero de 2022 por el autor-editor Juan Carlos Doñate."
+  },
+  {
+    "id": 3,
+    "titulo": "La batalla de Gog y Magog",
+    "autor": "Juan Carlos Doñate",
+    "imagen": "public/img/laBatallaDeGodMagog.png",
+    "sinopsis": "Después que los muertos resucitaron para saciar su salvaje hambre con carne fresca, el mundo ya no es el mismo. Daniel (quien relata los acontecimientos) y sus amigos conocen una comunidad religiosa y aparentemente segura. Betel parece el santuario perfecto, pero pronto se revelará el siniestro secreto que esconde su líder. Jefté Alba tiene dogmas muy particulares mediante los cuales imparte justicia y orden. Es sabido que posee una gran rivalidad con Predicador, un forajido que dirige a un grupo de rebeldes. Los muertos dejarán de ser la mayor amenaza cuando se desate una batalla encarnizada entre los dos bandos, y Daniel estará en medio."
+  },
+  {
+    "id": 4,
+    "titulo": "La casa del bosque maldito",
+    "imagen": "public/img/heraldosDelSeol.png",
+    "sinopsis": "Hay una casa situada en el corazón del bosque maldito: tablas viejas, escarapeladas por los años, de amplios ventanales y escaleras que rechinan con murmullos de una no muy agradable bienvenida, donde cada pisada que dan es un llamado al infierno. Para nuestros protagonistas es un refugio seguro; pero no será así."
+  },
+  {
+    "id": 5,
+    "titulo": "Atrum el ascenso de Samhain",
+    "autor": "Juan Carlos Doñate y Jorge Alfaro",
+    "imagen": "public/img/astrum.png",
+    "sinopsis": "Después del Ascenso de Samhain, las puertas del Infierno han sido abiertas y el mundo atraviesa una etapa oscura en la que un virus demoniaco infecta a las personas. Pero eso es lo de menos. Dioses, demonios y otras entidades se batirán en duelo por la supremacía. Joan Bautista sigue perdido mientras los misterios de ATRUM se esclarecen poco a poco. Mientras tanto, Antonio Roldán, la doctora Erika Reyes y los demás se encuentran refugiados en una comunidad militar que no será segura por mucho tiempo. Buscarán sobrevivir a toda costa, y para ello deberán enfrentar grandes amenazas, entre las cuales habrá entidades de poder abrumador."
+  },
+  {
+    "id": 6,
+    "titulo": "Aberraciones de la oscuridad",
+    "imagen": "public/img/aberracionesDeLaOscuridad.png",
+    "sinopsis": "En la oscuridad se esconden las aberraciones que acechan sigilosamente a sus víctimas y los escabrosos relatos de esta antología nos muestran lo imposible que resulta huir de ellas, así como del peligro que asedia en todas partes."
+  },
+  {
+    "id": 7,
+    "titulo": "A través de la máscara",
+    "editor": "Juan Carlos Doñate",
+    "imagen": "public/img/aTravesDeLaMascaraUnaMiradaAlMal.png",
+    "sinopsis": "A través de una espeluznante narrativa donde se explora el miedo, el horror lacerante y una oscura fantasía con protagonismos épicos, los diecinueve autores de esta fascinante antología revelan sus visiones más sombrías, sórdidas y siniestras. Desde una familia que está siendo acechada por algo que se agazapa en la penumbra de la noche, hasta un deportista que, en aras de justicia, no teme explorar el lado oscuro del inconsciente; o incluso hasta un reino que ha caído en las garras de la tiranía. Una vez que abras este libro, el miedo será tu cómplice."
+  },
+  {
+    "id": 8,
+    "titulo": "Nadie escuchará tus lamentos",
+    "imagen": "public/img/nadieEscucharaTusLamentos.png",
+    "sinopsis": "Es una antología de horror y fantasía con quince relatos que exploran los mecanismos del miedo a través de los fenómenos sobrenaturales más abominables que puedas imaginar, desde unos padres buscando a su hijo perdido, hasta el último hombre sobre la faz de la tierra, el cual huye de algo siniestro. El horror cobra sentido cuando nos adentramos al terreno ficticio de lo mórbido y lo grotesco, del misterio, el suspenso y lo perturbador. Y qué decir de los turbulentos escenarios donde se manifiestan aberraciones sacadas de las peores pesadillas."
+  },
+  {
+    "id": 9,
+    "titulo": "Poemario de Diego Munguía",
+    "autor": "Diego Munguía",
+    "imagen": "public/img/visionesSombrias.png",
+    "sinopsis": "¿Te atreverías a leer un poemario escrito por alguien que a dicho públicamente que detesta la poesía? Pues, este es el volumen que buscabas. Inspirado por la anti-poesía (nacida en Chile) y los versos siniestros y hermosos de Bradbury y Straub. Versos que te harán decir que todo es una quimera. Pero es la visión de Diego Munguia la cual, no es por completo una poesia, ni anti-poesia. Si no que sons sus versos que siente y desprecia. Una carta adelantada a su generación de que no deben matarse escribiendo poesía compleja cuando se puede hacer lo mismo pero más emocionalmente deprimente. 18 versos reunidos al rededor de la vida del escritor México oriundo de Nezahualcóyotl. ¿Te gusta lo sombrío? A mi también, dice el escritor"
+  }
 ]
