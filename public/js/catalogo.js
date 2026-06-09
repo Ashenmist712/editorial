@@ -63,7 +63,16 @@ document.addEventListener("DOMContentLoaded", () => {
         dYear.textContent = libro.anio || "No especificado";
         dPrice.textContent = libro.precio || "0.00";
         dSynopsis.textContent = libro.sinopsis || "Sinopsis no disponible.";
-        dAmazon.href = libro.amazon_link || "#";
+        
+        const dNoAmazon = document.getElementById("detail-no-amazon");
+        if (libro.amazon_link) {
+            dAmazon.href = libro.amazon_link;
+            dAmazon.style.display = "inline-block";
+            if(dNoAmazon) dNoAmazon.style.display = "none";
+        } else {
+            dAmazon.style.display = "none";
+            if(dNoAmazon) dNoAmazon.style.display = "block";
+        }
 
         // Actualizar paginación
         dPagination.textContent = `${currentBookIndex + 1} / ${librosData.length}`;
