@@ -159,18 +159,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const phone = document.getElementById('wa-phone').value.trim();
             const message = document.getElementById('wa-message').value.trim();
             
-            // Construir el mensaje formateado para WhatsApp
-            const waNumber = "525611871013"; // Número proporcionado por el usuario
-            const textMsg = `Hola Linterna Negra,\n\nMi nombre es *${name}*.\nMi correo es: ${email}\nMi teléfono es: ${phone}\n\n*De qué trata mi libro / Mi duda:*\n${message}`;
+            // Construir el mensaje formateado para el Correo
+            const emailAddress = "linternanegraediciones@gmail.com";
+            const subject = encodeURIComponent("Contacto desde la página web");
+            const textMsg = `Hola Linterna Negra,\n\nMi nombre es: ${name}\nMi correo es: ${email}\nMi teléfono es: ${phone}\n\nDe qué trata mi libro / Mi duda:\n${message}`;
             
             // Codificar el texto para URL
             const encodedText = encodeURIComponent(textMsg);
             
-            // Crear el enlace a WhatsApp API
-            const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
+            // Crear el enlace mailto
+            const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${encodedText}`;
             
-            // Abrir en una nueva pestaña
-            window.open(waUrl, '_blank');
+            // Abrir el cliente de correo
+            window.location.href = mailtoUrl;
             
             // Opcional: Cerrar el modal después de enviar
             if (modal) {
