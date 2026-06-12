@@ -20,7 +20,8 @@
     "imagen": "public/img/laBatallaDeGodMagog.png",
     "sinopsis": "Después que los muertos resucitaron para saciar su salvaje hambre con carne fresca, el mundo ya no es el mismo. Daniel (quien relata los acontecimientos) y sus amigos conocen una comunidad religiosa y aparentemente segura. Betel parece el santuario perfecto, pero pronto se revelará el siniestro secreto que esconde su líder. Jefté Alba tiene dogmas muy particulares mediante los cuales imparte justicia y orden. Es sabido que posee una gran rivalidad con Predicador, un forajido que dirige a un grupo de rebeldes. Los muertos dejarán de ser la mayor amenaza cuando se desate una batalla encarnizada entre los dos bandos, y Daniel estará en medio.",
     "precio": 330,
-    "paypal_link": "https://a.co/d/0eX7z4kT"
+    "paypal_link": "https://a.co/d/0eX7z4kT",
+    "amazon_link": "https://a.co/d/0eX7z4kT"
   },
   {
     "id": 4,
@@ -29,7 +30,8 @@
     "imagen": "public/img/heraldosDelSeol.png",
     "sinopsis": "Hay una casa situada en el corazón del bosque maldito: tablas viejas, escarapeladas por los años, de amplios ventanales y escaleras que rechinan con murmullos de una no muy agradable bienvenida, donde cada pisada que dan es un llamado al infierno. Para nuestros protagonistas es un refugio seguro; pero no será así.",
     "precio": 350,
-    "paypal_link": "https://a.co/d/00RPo66J"
+    "paypal_link": "https://a.co/d/00RPo66J",
+    "amazon_link": "https://a.co/d/00RPo66J"
   },
   {
     "id": 5,
@@ -38,7 +40,8 @@
     "imagen": "public/img/astrum.png",
     "sinopsis": "Después del Ascenso de Samhain, las puertas del Infierno han sido abiertas y el mundo atraviesa una etapa oscura en la que un virus demoniaco infecta a las personas. Pero eso es lo de menos. Dioses, demonios y otras entidades se batirán en duelo por la supremacía. Joan Bautista sigue perdido mientras los misterios de ATRUM se esclarecen poco a poco. Mientras tanto, Antonio Roldán, la doctora Erika Reyes y los demás se encuentran refugiados en una comunidad militar que no será segura por mucho tiempo. Buscarán sobrevivir a toda costa, y para ello deberán enfrentar grandes amenazas, entre las cuales habrá entidades de poder abrumador.",
     "precio": 300,
-    "paypal_link": "https://a.co/d/0h5zBQx9"
+    "paypal_link": "https://a.co/d/0h5zBQx9",
+    "amazon_link": "https://a.co/d/0h5zBQx9"
   },
   {
     "id": 6,
@@ -46,7 +49,8 @@
     "imagen": "public/img/aberracionesDeLaOscuridad.png",
     "sinopsis": "En la oscuridad se esconden las aberraciones que acechan sigilosamente a sus víctimas y los escabrosos relatos de esta antología nos muestran lo imposible que resulta huir de ellas, así como del peligro que asedia en todas partes.",
     "precio": 250,
-    "paypal_link": "https://a.co/d/0iIhS1Z2"
+    "paypal_link": "https://a.co/d/0iIhS1Z2",
+    "amazon_link": "https://a.co/d/0ilhS1Z2"
   },
   {
     "id": 7,
@@ -55,7 +59,8 @@
     "imagen": "public/img/aTravesDeLaMascaraUnaMiradaAlMal.png",
     "sinopsis": "A través de una espeluznante narrativa donde se explora el miedo, el horror lacerante y una oscura fantasía con protagonismos épicos, los diecinueve autores de esta fascinante antología revelan sus visiones más sombrías, sórdidas y siniestras. Desde una familia que está siendo acechada por algo que se agazapa en la penumbra de la noche, hasta un deportista que, en aras de justicia, no teme explorar el lado oscuro del inconsciente; o incluso hasta un reino que ha caído en las garras de la tiranía. Una vez que abras este libro, el miedo será tu cómplice.",
     "precio": 250,
-    "paypal_link": "https://a.co/d/0j0OK2WY"
+    "paypal_link": "https://a.co/d/0j0OK2WY",
+    "amazon_link": "https://a.co/d/0j0OK2WY"
   },
   {
     "id": 8,
@@ -63,7 +68,8 @@
     "imagen": "public/img/nadieEscucharaTusLamentos.png",
     "sinopsis": "Es una antología de horror y fantasía con quince relatos que exploran los mecanismos del miedo a través de los fenómenos sobrenaturales más abominables que puedas imaginar, desde unos padres buscando a su hijo perdido, hasta el último hombre sobre la faz de la tierra, el cual huye de algo siniestro. El horror cobra sentido cuando nos adentramos al terreno ficticio de lo mórbido y lo grotesco, del misterio, el suspenso y lo perturbador. Y qué decir de los turbulentos escenarios donde se manifiestan aberraciones sacadas de las peores pesadillas.",
     "precio": 250,
-    "paypal_link": "https://a.co/d/061wLw8E"
+    "paypal_link": "https://a.co/d/061wLw8E",
+    "amazon_link": "https://a.co/d/061wLw8E"
   },
   {
     "id": 9,
@@ -71,6 +77,7 @@
     "autor": "Diego Munguía",
     "imagen": "public/img/visionesSombrias.png",
     "sinopsis": "¿Te atreverías a leer un poemario escrito por alguien que a dicho públicamente que detesta la poesía? Pues, este es el volumen que buscabas. Inspirado por la anti-poesía (nacida en Chile) y los versos siniestros y hermosos de Bradbury y Straub. Versos que te harán decir que todo es una quimera. Pero es la visión de Diego Munguia la cual, no es por completo una poesia, ni anti-poesia. Si no que sons sus versos que siente y desprecia. Una carta adelantada a su generación de que no deben matarse escribiendo poesía compleja cuando se puede hacer lo mismo pero más emocionalmente deprimente. 18 versos reunidos al rededor de la vida del escritor México oriundo de Nezahualcóyotl. ¿Te gusta lo sombrío? A mi también, dice el escritor",
-    "precio": 220
+    "precio": 220,
+    "amazon_link": "https://a.co/d/04FvEX3u"
   }
 ]
