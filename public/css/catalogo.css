@@ -223,26 +223,86 @@
     margin-right: 0.5rem;
 }
 
-.btn-amazon {
+.purchase-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.btn-buy {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    background: linear-gradient(135deg, #4b1a2e, #2e0f1c);
-    border: 1px solid rgba(220, 38, 38, 0.4);
-    color: var(--text-primary);
-    padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
 }
 
-.btn-amazon:hover {
+/* Primary Button (PayPal) */
+.btn-buy.primary {
+    background: linear-gradient(135deg, #4b1a2e, #2e0f1c);
+    border: 1px solid rgba(220, 38, 38, 0.6);
+    color: var(--text-primary);
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.btn-buy.primary:hover:not(:disabled) {
     background: linear-gradient(135deg, #5c2038, #3b1324);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
     border-color: var(--accent);
+}
+
+/* Secondary Button (Amazon) */
+.btn-buy.secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-buy.secondary:hover:not(.disabled) {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Disabled/Loading States */
+.btn-buy:disabled,
+.btn-buy.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+    pointer-events: none;
+}
+
+.btn-buy.primary:disabled {
+    background: linear-gradient(135deg, #2e0f1c, #1a0810);
+    border-color: rgba(220, 38, 38, 0.2);
+}
+
+.btn-buy.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-buy.loading i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
 }
 
 /* Sinopsis Abajo */
@@ -369,7 +429,7 @@
     .nav-arrow i {
         font-size: 1.5rem;
     }
-    .btn-amazon {
+    .btn-buy {
         padding: 0.8rem 1.2rem;
         font-size: 0.9rem;
     }

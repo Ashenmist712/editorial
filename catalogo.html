@@ -20,7 +20,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">La Editorial</a></li>
             <li><a href="catalogo.html" style="color: var(--text-primary);">Catálogo</a></li>
         </ul>
     </nav>
@@ -73,13 +73,15 @@
                     <p><strong>PRECIO:</strong> $<span id="detail-price">299.00</span> MXN</p>
                 </div>
                 
-                <a href="#" id="detail-amazon" class="btn-amazon" target="_blank">
-                    COMPRAR EN AMAZON <i class="fab fa-amazon"></i>
-                </a>
-                <p id="detail-no-amazon" style="display: none; color: var(--text-secondary); margin-top: 1rem; font-size: 0.95rem; border: 1px dashed var(--accent-red); padding: 10px; border-radius: 5px; text-align: center;">
-                    Próximamente en Amazon. Si deseas adquirirlo, envía un mensaje a <br>
-                    <a href="mailto:linternanegraediciones@gmail.com" style="color: var(--text-primary); text-decoration: underline;"><i class="fas fa-envelope"></i> linternanegraediciones@gmail.com</a>
-                </p>
+                <div class="purchase-actions">
+                    <button id="btn-buy-now" class="btn-buy primary">
+                        COMPRAR AHORA <i class="fab fa-paypal"></i>
+                    </button>
+                    
+                    <a href="#" id="btn-amazon-secondary" class="btn-buy secondary" target="_blank">
+                        Comprar en Amazon <i class="fab fa-amazon"></i>
+                    </a>
+                </div>
             </div>
         </div>
         

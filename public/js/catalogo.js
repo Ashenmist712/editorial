@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const dAuthorMeta = document.getElementById("detail-author-meta");
     const dYear = document.getElementById("detail-year");
     const dPrice = document.getElementById("detail-price");
-    const dAmazon = document.getElementById("detail-amazon");
+    const dBuyNow = document.getElementById("btn-buy-now");
+    const dAmazonSecondary = document.getElementById("btn-amazon-secondary");
     const dSynopsis = document.getElementById("detail-synopsis");
     const navPrev = document.getElementById("nav-prev");
     const navNext = document.getElementById("nav-next");
@@ -82,14 +83,25 @@ document.addEventListener("DOMContentLoaded", () => {
         dPrice.textContent = libro.precio || "0.00";
         dSynopsis.textContent = libro.sinopsis || "Sinopsis no disponible.";
         
-        const dNoAmazon = document.getElementById("detail-no-amazon");
+        // 1. Botón Principal (PayPal) - Siempre Activo
+        dBuyNow.dataset.paypalLink = libro.paypal_link || ""; 
+        dBuyNow.dataset.title = libro.titulo;
+        dBuyNow.dataset.price = libro.precio;
+        dBuyNow.disabled = false;
+        dBuyNow.classList.remove("loading");
+        dBuyNow.innerHTML = 'COMPRAR AHORA <i class="fab fa-paypal"></i>';
+
+        // 2. Botón Secundario (Amazon / Próximamente)
         if (libro.amazon_link) {
-            dAmazon.href = libro.amazon_link;
-            dAmazon.style.display = "inline-block";
-            if(dNoAmazon) dNoAmazon.style.display = "none";
+            dAmazonSecondary.classList.remove("disabled");
+            dAmazonSecondary.href = libro.amazon_link;
+            dAmazonSecondary.target = "_blank";
+            dAmazonSecondary.innerHTML = 'Comprar en Amazon <i class="fab fa-amazon"></i>';
         } else {
-            dAmazon.style.display = "none";
-            if(dNoAmazon) dNoAmazon.style.display = "block";
+            dAmazonSecondary.classList.add("disabled");
+            dAmazonSecondary.href = "javascript:void(0)";
+            dAmazonSecondary.removeAttribute("target");
+            dAmazonSecondary.innerHTML = 'Próximamente';
         }
 
         // Actualizar paginación
@@ -101,6 +113,51 @@ document.addEventListener("DOMContentLoaded", () => {
         detailView.classList.remove("hidden");
         window.scrollTo(0, 0);
     }
+
+    // --- LÓGICA DE COMPRA Y GOOGLE SHEETS ---
+    const GAS_WEB_APP_URL = "TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI"; // REEMPLAZAR CON LA URL DESPLEGADA
+
+    dBuyNow.addEventListener("click", async (e) => {
+        e.preventDefault();
+        
+        const paypalLink = dBuyNow.dataset.paypalLink;
+        if (!paypalLink) return;
+
+        // Bloquear botón y UI de carga
+        dBuyNow.disabled = true;
+        dBuyNow.classList.add("loading");
+        dBuyNow.innerHTML = 'PROCESANDO... <i class="fas fa-spinner"></i>';
+
+        const data = {
+            titulo: dBuyNow.dataset.title,
+            precio: dBuyNow.dataset.price,
+            fecha: new Date().toLocaleString("es-MX"),
+            estado: "Pendiente"
+        };
+
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 segundos max
+
+            // no-cors se usa para evitar bloqueos del navegador hacia GAS
+            // GAS recibirá el payload como texto plano y lo parseará
+            await fetch(GAS_WEB_APP_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: JSON.stringify(data),
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+        } catch (error) {
+            console.error("Error silencioso al registrar en GAS:", error);
+        }
+
+        // Redirigir siempre a PayPal
+        window.location.href = paypalLink;
+    });
 
     // Volver al catálogo
     backButton.addEventListener("click", (e) => {
