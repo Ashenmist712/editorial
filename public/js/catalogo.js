@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dAmazonSecondary.classList.remove("disabled");
             dAmazonSecondary.href = libro.amazon_link;
             dAmazonSecondary.target = "_blank";
-            dAmazonSecondary.innerHTML = 'Comprar en Amazon <i class="fab fa-amazon"></i>';
+            dAmazonSecondary.innerHTML = 'Comprar <i class="fab fa-amazon"></i>';
         } else {
             dAmazonSecondary.classList.add("disabled");
             dAmazonSecondary.href = "javascript:void(0)";
@@ -121,7 +121,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         
         const paypalLink = dBuyNow.dataset.paypalLink;
-        if (!paypalLink) return;
+        if (!paypalLink) {
+            alert("Enlace de PayPal no disponible por el momento. ¡Próximamente!");
+            return;
+        }
 
         // Bloquear botón y UI de carga
         dBuyNow.disabled = true;
